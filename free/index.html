@@ -14,6 +14,7 @@
 <style>
 :root{--bg:#0A0A0A;--s1:#131313;--s2:#1B1B1B;--line:#2A2A2A;--tx:#F5F5F3;--mu:#A8A8A3;--dim:#77776F;--red:#FF3B30;--gold:#F2B417;--green:#3DDC84}
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none !important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--tx)}
@@ -59,6 +60,12 @@ nav.top{position:sticky;top:14px;z-index:40;margin:14px auto 0;max-width:1120px;
 nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(19,19,19,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 20px}
 .brand{display:flex;align-items:center;gap:10px;font-family:"Inter Tight",sans-serif;font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:17px}
 .shot{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#1F1F1F}
+.qq{font-family:"Inter Tight",sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,2.6vw,30px);text-align:center;margin-bottom:22px}
+.qo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.qo{grid-template-columns:1fr}}
+.qo button{min-height:60px;border-radius:16px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:600 16px Inter,sans-serif;cursor:pointer;transition:border-color .15s,background .15s}
+.qo button:hover,.qo button.on{border-color:var(--gold);background:rgba(242,180,23,.08)}
+.qi{min-height:54px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit}
 .sticky{display:none}
 @media (max-width:820px){#free{grid-template-columns:1fr !important}}
 @media (max-width:820px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50}body{padding-bottom:84px}.two{grid-template-columns:1fr !important}.sec{padding:80px 0}nav.top .btn{display:none}}
@@ -68,7 +75,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <nav class="top"><div class="in">
 <a class="brand" href="../"><span class="dot"></span>The Organic System</a>
 <a class="btn sm" href="https://calendly.com/youtubesystem/30min">Book a call</a>
-</div></nav>
+</div></nav><script>(function(){var ok=false;try{ok=localStorage.getItem('tos_optin')==='1'}catch(e){}if(!ok&&location.search.indexOf('fit=')<0){location.replace('../#free')}})();</script>
 <header class="wrap center" style="padding-top:80px;padding-bottom:48px;display:flex;flex-direction:column;align-items:center;gap:22px;max-width:900px">
 <span class="pill"><span class="dot"></span>Free · no call needed</span>
 <h1 class="d">The YouTube OS <span class="hl">Essentials</span></h1>
@@ -76,7 +83,9 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <div><a href="https://mehdimouatqdir.notion.site/YouTube-Ecosystem-187c3f47797980c5b700f3e0bcb21c4b?source=copy_link" target="_blank" rel="noopener" style="font-weight:600;font-size:15px;color:var(--tx);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px">Open the full YouTube Ecosystem in Notion ↗</a></div>
 </header>
 <section class="wrap" style="padding-bottom:80px">
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+<div id="fitbar" hidden class="card" style="max-width:860px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-color:rgba(242,180,23,.5)"><div><b>From your answers, you look like a fit for the Sprint.</b><div style="color:var(--mu);font-size:15px">A 30-minute call is free, and you leave with a plan either way.</div></div><a class="btn sm" href="https://calendly.com/youtubesystem/30min">Book a call →</a></div>
+<script>if(location.search.indexOf('fit=1')>=0)document.getElementById('fitbar').hidden=false;</script>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-top:28px">
 <article class="card" style="padding:18px;display:flex;flex-direction:column;gap:14px"><div class="media" style="aspect-ratio:16/9"><video src="../assets/course_thumbnails.mp4" poster="../assets/course_thumbnails.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div><div style="display:flex;flex-direction:column;gap:8px;padding:4px 6px 6px">
 <div class="eyebrow">Lesson 1</div>
 <div style="font-weight:800;font-size:22px;font-family:'Inter Tight',sans-serif;letter-spacing:-.02em">Thumbnail System</div>
