@@ -15,7 +15,7 @@
 :root{--bg:#0A0A0A;--s1:#131313;--s2:#1B1B1B;--line:#2A2A2A;--tx:#F5F5F3;--mu:#A8A8A3;--dim:#77776F;--red:#FF3B30;--gold:#F2B417;--green:#3DDC84}
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none !important}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth}section[id]{scroll-margin-top:90px}
 body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--tx)}
 img,video{max-width:100%;display:block}
@@ -58,6 +58,8 @@ details[open] summary::after{content:"–"}
 details p{margin:12px 0 0;color:var(--mu);max-width:760px}
 nav.top{position:sticky;top:14px;z-index:40;margin:14px auto 0;max-width:1120px;padding:0 16px}
 nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(19,19,19,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 20px}
+.nl{display:flex;gap:4px;margin-left:auto}.nl a{color:var(--mu);text-decoration:none;font-size:15px;font-weight:500;padding:9px 14px;border-radius:999px;transition:color .15s,background .15s}.nl a:hover{color:var(--tx);background:var(--s2)}.nl .nfree{color:var(--gold)}
+@media (max-width:900px){.nl{display:none}}
 .brand{display:flex;align-items:center;gap:10px;font-family:"Inter Tight",sans-serif;font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:17px}
 .shot{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#1F1F1F}
 .modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px;overflow:auto}
@@ -77,6 +79,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <body>
 <nav class="top"><div class="in">
 <a class="brand" href="./"><span class="dot"></span>The Organic System</a>
+<div class="nl"><a href="./#results">Results</a><a href="./#offer">The Sprint</a><a href="./#about">About</a><a href="./#faq">FAQ</a><a href="./#free" class="nfree">Free Essentials</a></div>
 <a class="btn sm" href="#book">Book a call</a>
 </div></nav>
 <header class="wrap center" style="padding-top:84px;padding-bottom:40px;display:flex;flex-direction:column;align-items:center;gap:26px;max-width:980px">
@@ -89,7 +92,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 </div>
 </header>
 <section class="wrap" style="max-width:900px;padding-bottom:28px">
-<div class="media" style="aspect-ratio:16/10"><video src="assets/riley.mp4" poster="assets/riley.jpg" controls preload="none" playsinline style="object-fit:cover"></video></div>
+<div class="media" style="aspect-ratio:1200/676"><video src="assets/riley.mp4" poster="assets/riley.jpg" controls preload="none" playsinline style="object-fit:cover"></video></div>
 </section>
 <section class="wrap" style="padding-bottom:40px">
 <div style="display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;align-items:center;color:var(--dim);font-size:15px;padding-top:26px;border-top:1px solid var(--line)">
@@ -154,7 +157,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 </div>
 </div></section>
 
-<section class="sec" style="padding-top:20px"><div class="wrap">
+<section id="reviews" class="sec" style="padding-top:20px"><div class="wrap">
 <div class="center" style="display:flex;flex-direction:column;gap:14px;margin-bottom:44px;align-items:center">
 <div class="eyebrow">In their own words</div>
 <h2 class="d">Founders who've worked with me</h2>
@@ -178,7 +181,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <div style="max-width:640px"><div class="eyebrow">Free</div><h3 class="d" style="font-size:clamp(26px,3.2vw,40px);margin:8px 0">Want the system I use to turn videos into <span class="hl">booked calls?</span></h3><p style="margin:0;color:var(--mu)">Thumbnail templates, the video idea bank and the ideation system. Free.</p></div>
 <a class="btn" href="#free">Get it free →</a></div></section>
 
-<section class="sec" style="padding-top:20px"><div class="wrap">
+<section id="about" class="sec" style="padding-top:20px"><div class="wrap">
 <div class="grid two about" style="grid-template-columns:5fr 7fr;gap:56px;align-items:center">
 <div class="card" style="padding:0;overflow:hidden;aspect-ratio:4/5"><img src="assets/mehdi.jpg" alt="Mehdi with his camera" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block"></div>
 <div style="display:flex;flex-direction:column;gap:20px">
@@ -203,7 +206,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 </div>
 </div></section>
 
-<section class="sec" style="padding-top:20px"><div class="wrap">
+<section id="offer" class="sec" style="padding-top:20px"><div class="wrap">
 <div class="center" style="display:flex;flex-direction:column;gap:14px;margin-bottom:44px;align-items:center">
 <div class="eyebrow">The Founder Channel Sprint</div>
 <h2 class="d">What you get in 6 weeks</h2>
@@ -222,7 +225,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 </div>
 </div></section>
 
-<section class="sec" style="padding-top:20px"><div class="wrap" style="max-width:880px">
+<section id="faq" class="sec" style="padding-top:20px"><div class="wrap" style="max-width:880px">
 <h2 class="d center" style="margin-bottom:20px">Questions founders ask me</h2>
 <details><summary>I've tried YouTube. It doesn't bring clients in my business.</summary><p>That's what Riley thought. He's a startup advisor, his videos were good and sat at a few hundred views. We didn't change the video, only the title and thumbnail, and it brought him 8 calls. Most channels don't have a content problem, they have a packaging problem.</p></details>
 <details><summary>Isn't YouTube too slow? Networking gets clients faster.</summary><p>Keep networking. YouTube is what keeps working while you sleep: Houda's channel kept growing a year after we stopped. Week 1 repackages videos you already have, so you're not starting from zero.</p></details>
