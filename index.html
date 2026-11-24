@@ -247,15 +247,15 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <p class="center" style="margin:16px 0 0;color:var(--dim);font-size:14px">Calendar not loading? <a href="https://calendly.com/youtubesystem/30min" style="color:var(--tx);font-weight:700">Open it here →</a></p>
 <div class="card" style="margin-top:40px;padding:clamp(26px,4vw,44px);display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center" id="free">
 <div><div class="eyebrow">Not ready for a call?</div><h3 class="d" style="font-size:clamp(26px,3vw,38px);margin:10px 0">Get the templates I use with clients. <span class="hl">Free.</span></h3><p style="margin:0;color:var(--mu)">40 thumbnail templates, the video idea bank and the ideation system, with a short lesson for each.</p></div>
-<form id="optin" action="https://formsubmit.co/mehdi.mouqtadir2007@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:12px">
-<input type="hidden" name="_subject" value="New YouTube OS Essentials signup">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://theorganicsystem.com/free/">
-<input type="text" name="_honey" style="display:none">
-<input name="name" required placeholder="First name" style="min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit">
-<input name="email" type="email" required placeholder="Email" style="min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit">
+<form id="optin" style="display:flex;flex-direction:column;gap:12px" onsubmit="return optin(event)">
+<input name="entry.1429896837" required placeholder="First name" style="min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit">
+<input name="entry.483548964" type="email" required placeholder="Email" style="min-height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit">
 <button class="btn" type="submit" style="border:0;cursor:pointer;width:100%">Send me the Essentials →</button>
 </form>
+<script>
+function optin(e){e.preventDefault();var f=e.target,b=f.querySelector('button');b.textContent='Opening your Essentials…';b.disabled=true;
+fetch('https://docs.google.com/forms/d/e/1FAIpQLSeMFAjYaYUUiR7VPn7BhvdL3if3p7__s5glSGPLzMUUkc8Rfg/formResponse',{method:'POST',mode:'no-cors',body:new FormData(f)}).finally(function(){location.href='free/'});return false}
+</script>
 </div>
 </div></section>
 <a class="btn sticky" href="#book">Book a call →</a>
