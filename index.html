@@ -70,7 +70,7 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 .qo button:hover,.qo button.on{border-color:var(--gold);background:rgba(242,180,23,.08)}
 .qi{min-height:54px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--tx);padding:0 16px;font:inherit}
 .sticky{display:none}
-@media (max-width:820px){#free{grid-template-columns:1fr !important}}
+@media (max-width:820px){#free{grid-template-columns:1fr !important}.about>.card{max-width:320px;width:100%;margin:0 auto}}
 @media (max-width:820px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50}body{padding-bottom:84px}.two{grid-template-columns:1fr !important}.sec{padding:80px 0}nav.top .btn{display:none}}
 </style>
 </head>
@@ -179,18 +179,18 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <a class="btn" href="#free">Get it free →</a></div></section>
 
 <section class="sec" style="padding-top:20px"><div class="wrap">
-<div class="grid two" style="grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+<div class="grid two about" style="grid-template-columns:5fr 7fr;gap:56px;align-items:center">
+<div class="card" style="padding:0;overflow:hidden;aspect-ratio:4/5"><img src="assets/mehdi.jpg" alt="Mehdi with his camera" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block"></div>
 <div style="display:flex;flex-direction:column;gap:20px">
 <div class="eyebrow">Who you'd work with</div>
 <h2 class="d">I'm Mehdi. I've been on YouTube <span class="hl">since I was 10.</span></h2>
 <p class="lead">Now I use it for one thing: turning founders' channels into booked calls. Views are nice. Clients pay the bills.</p>
-</div>
 <div class="grid" style="grid-template-columns:1fr 1fr;gap:16px">
 <div class="card" style="padding:26px"><div class="stat"><div class="n hl">8</div><div class="l">calls booked by Riley from one repackaged video</div></div></div>
 <div class="card" style="padding:26px"><div class="stat"><div class="n hl">10</div><div class="l">calls booked from YouTube by Mohammad, a member of my community</div></div></div>
 <div class="card" style="padding:26px"><div class="stat"><div class="n">43.5K</div><div class="l">views on Houda's paused channel</div></div></div>
 <div class="card" style="padding:26px"><div class="stat"><div class="n">9</div><div class="l">years making YouTube videos</div></div></div>
-</div></div>
+</div></div></div>
 </div></section>
 
 <section class="sec" style="padding-top:20px"><div class="wrap">
@@ -250,23 +250,25 @@ nav.top .in{display:flex;justify-content:space-between;align-items:center;gap:16
 <div class="center" style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:26px">
 <div class="eyebrow">Free · YouTube OS Essentials</div>
 <h3 class="d" style="font-size:clamp(26px,3.2vw,38px)">Get the system I use to turn videos into <span class="hl">booked calls.</span></h3>
-<p style="margin:0;color:var(--mu)">3 quick questions, then it's yours.</p>
+<p style="margin:0;color:var(--mu)">4 quick taps, then it's yours.</p>
 </div>
-<div style="height:6px;background:var(--s2);border-radius:99px;overflow:hidden;margin-bottom:26px"><div id="qbar" style="height:100%;width:25%;background:var(--gold);transition:width .3s"></div></div>
+<div style="height:6px;background:var(--s2);border-radius:99px;overflow:hidden;margin-bottom:26px"><div id="qbar" style="height:100%;width:20%;background:var(--gold);transition:width .3s"></div></div>
 <form id="quiz" onsubmit="return qsubmit(event)">
 <div class="qs" data-k="entry.479355941"><div class="qq">What do you sell?</div><div class="qo">
-<button type="button">Coaching or a course</button><button type="button">A service or agency</button><button type="button">A Skool community</button><button type="button">Software</button><button type="button">Nothing yet</button></div></div>
-<div class="qs" data-k="entry.1577055897" hidden><div class="qq">Roughly what does your business make a month?</div><div class="qo">
-<button type="button">Under $5K</button><button type="button">$5K to $20K</button><button type="button">$20K to $100K</button><button type="button">$100K+</button></div></div>
+<button type="button">Coaching or courses</button><button type="button">Service, agency or consulting</button><button type="button">Community or membership</button><button type="button">Software</button><button type="button">Physical products</button><button type="button">Something else</button></div></div>
+<div class="qs" data-k="entry.1577055897" hidden><div class="qq">What does the business make a month?</div><div class="qo">
+<button type="button">Not making money yet</button><button type="button">Under $5K</button><button type="button">$5K to $20K</button><button type="button">$20K to $100K</button><button type="button">$100K+</button></div></div>
+<div class="qs" data-k="entry.483548964" hidden><div class="qq">Where do most of your clients come from today?</div><div class="qo">
+<button type="button">Referrals</button><button type="button">Outreach and DMs</button><button type="button">Paid ads</button><button type="button">Content and social</button><button type="button">It's not consistent</button></div></div>
 <div class="qs" data-k="entry.1543030364" hidden><div class="qq">Where's your YouTube at?</div><div class="qo">
 <button type="button">No channel yet</button><button type="button">Posting, but no clients from it</button><button type="button">Getting views, few calls</button><button type="button">It already brings clients</button></div></div>
-<div class="qs" hidden><div class="qq">Where should I send them?</div>
+<div class="qs" hidden><div class="qq">Where should I send it?</div>
 <div style="display:flex;flex-direction:column;gap:12px;max-width:520px;margin:0 auto">
 <input name="entry.1429896837" required placeholder="First name" class="qi">
-<input name="entry.483548964" type="email" required placeholder="Email" class="qi">
+<input name="entry.340757668" type="email" required placeholder="Email" class="qi">
 <button class="btn" type="submit" style="border:0;cursor:pointer;width:100%">Send me the Essentials →</button>
 </div></div>
-<input type="hidden" name="entry.479355941"><input type="hidden" name="entry.1577055897"><input type="hidden" name="entry.1543030364">
+<input type="hidden" name="entry.479355941"><input type="hidden" name="entry.1577055897"><input type="hidden" name="entry.483548964"><input type="hidden" name="entry.1543030364">
 </form>
 <button type="button" id="qback" onclick="qgo(-1)" hidden style="margin-top:18px;background:none;border:0;color:var(--dim);font:inherit;font-size:14px;cursor:pointer">← Back</button>
 </div></div>
@@ -284,7 +286,7 @@ document.addEventListener('mouseout',function h(e){if(!e.relatedTarget&&e.client
 if(window.innerWidth<820)setTimeout(function(){try{if(sessionStorage.getItem('tos_pop'))return}catch(e){}openFree()},40000);})();
 if(location.hash==='#free')openFree();
 function qsubmit(e){e.preventDefault();var f=e.target,b=f.querySelector('button[type=submit]');b.textContent='Opening your Essentials…';b.disabled=true;
-var rev=f.querySelector('input[name="entry.1577055897"]').value,fit=(rev&&rev.indexOf('Under')<0)?'1':'0';
+var rev=f.querySelector('input[name="entry.1577055897"]').value,sell=f.querySelector('input[name="entry.479355941"]').value,fit=(rev.charAt(0)==='$'&&sell!=='Physical products')?'1':'0';
 try{localStorage.setItem('tos_optin','1')}catch(x){}
 fetch('https://docs.google.com/forms/d/e/1FAIpQLSeMFAjYaYUUiR7VPn7BhvdL3if3p7__s5glSGPLzMUUkc8Rfg/formResponse',{method:'POST',mode:'no-cors',body:new FormData(f)}).finally(function(){location.href='free/?fit='+fit});return false}
 </script>
