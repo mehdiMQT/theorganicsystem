@@ -50,12 +50,13 @@ details summary::after{content:"+";color:var(--ac);font-size:24px;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin:12px 0 0;color:var(--mu);max-width:760px}
 hr.sep{border:0;border-top:1px solid var(--line);margin:0}
-@media (max-width:820px){.two{grid-template-columns:1fr !important}.sec{padding:72px 0}}
+.sticky{display:none}
+@media (max-width:820px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.6)}body{padding-bottom:84px}.two{grid-template-columns:1fr !important}.sec{padding:72px 0}}
 </style>
 </head>
 <body>
 <header class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px;gap:16px;flex-wrap:wrap">
-<a href="/" style="font-weight:800;text-decoration:none">Mehdi Mouqtadir</a>
+<a href="../" style="font-weight:800;text-decoration:none">Mehdi Mouqtadir</a>
 <a class="btn ghost" href="https://calendly.com/youtubesystem/30min">Book a call</a>
 </header>
 <section class="wrap" style="padding-top:48px;padding-bottom:48px;display:flex;flex-direction:column;gap:22px;max-width:900px;margin-left:auto;margin-right:auto">
@@ -67,7 +68,7 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0}
 <section class="wrap" style="padding-bottom:80px">
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
 <article class="card" style="padding:20px;display:flex;flex-direction:column;gap:14px">
-<div class="media" style="aspect-ratio:16/9"><video src="/assets/course_thumbnails.mp4" poster="/assets/course_thumbnails.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
+<div class="media" style="aspect-ratio:16/9"><video src="../assets/course_thumbnails.mp4" poster="../assets/course_thumbnails.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
 <div style="display:flex;flex-direction:column;gap:8px;padding:4px 6px 6px">
 <div class="eyebrow">Lesson 1</div>
 <div style="font-weight:800;font-size:22px">Thumbnail System</div>
@@ -83,7 +84,7 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0}
 <div style="margin-top:6px;line-height:2"><a href="https://mehdimouatqdir.notion.site/YouTube-Ecosystem-187c3f47797980c5b700f3e0bcb21c4b?source=copy_link" target="_blank" rel="noopener" style="font-weight:600;font-size:15px;color:var(--tx);text-decoration:underline;text-decoration-color:var(--ac);text-underline-offset:4px">The system ↗</a></div>
 </div></article>
 <article class="card" style="padding:20px;display:flex;flex-direction:column;gap:14px">
-<div class="media" style="aspect-ratio:16/9"><video src="/assets/course_ideas.mp4" poster="/assets/course_ideas.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
+<div class="media" style="aspect-ratio:16/9"><video src="../assets/course_ideas.mp4" poster="../assets/course_ideas.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
 <div style="display:flex;flex-direction:column;gap:8px;padding:4px 6px 6px">
 <div class="eyebrow">Lesson 3</div>
 <div style="font-weight:800;font-size:22px">Idea Template</div>
@@ -91,7 +92,7 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0}
 <div style="margin-top:6px;line-height:2"><a href="https://mehdimouatqdir.notion.site/Video-Ideas-Proven-to-Work-187c3f47797980b5adf9c135a706e750?pvs=74" target="_blank" rel="noopener" style="font-weight:600;font-size:15px;color:var(--tx);text-decoration:underline;text-decoration-color:var(--ac);text-underline-offset:4px">Ideas template ↗</a></div>
 </div></article>
 <article class="card" style="padding:20px;display:flex;flex-direction:column;gap:14px">
-<div class="media" style="aspect-ratio:16/9"><video src="/assets/course_ideation.mp4" poster="/assets/course_ideation.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
+<div class="media" style="aspect-ratio:16/9"><video src="../assets/course_ideation.mp4" poster="../assets/course_ideation.jpg" controls preload="none" playsinline style="object-fit:contain"></video></div>
 <div style="display:flex;flex-direction:column;gap:8px;padding:4px 6px 6px">
 <div class="eyebrow">Lesson 4</div>
 <div style="font-weight:800;font-size:22px">Ideation System</div>
@@ -101,12 +102,12 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0}
 </div>
 <div class="card" style="margin-top:40px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
 <div style="max-width:620px"><h2 class="d" style="font-size:clamp(30px,3.6vw,46px);margin-bottom:10px">Want it done for your channel?</h2><p style="margin:0;color:var(--mu)">In the Founder Channel Sprint I package your videos for you, every week, for 6 weeks.</p></div>
-<div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="https://calendly.com/youtubesystem/30min">Book a call →</a><a class="btn ghost" href="/">See results</a></div>
+<div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href="https://calendly.com/youtubesystem/30min">Book a call →</a><a class="btn ghost" href="../">See results</a></div>
 </div>
 </section>
 <footer style="border-top:1px solid var(--line)">
 <div class="wrap" style="padding-top:32px;padding-bottom:40px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:14px;color:var(--dim)">
 <span>© Mehdi Mouqtadir · YouTube strategy for founders</span>
-<span><a href="/free/" style="color:var(--mu)">Free YouTube OS Essentials</a> · <a href="https://calendly.com/youtubesystem/30min" style="color:var(--mu)">Book a call</a></span>
+<span><a href="./" style="color:var(--mu)">Free YouTube OS Essentials</a> · <a href="https://calendly.com/youtubesystem/30min" style="color:var(--mu)">Book a call</a></span>
 </div></footer>
 </body></html>
